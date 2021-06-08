@@ -1,0 +1,14 @@
+{
+	"name": "wechat",
+	"main": "app.html",	
+	"author": "zhou",	
+	"window": {		
+		"title": "微信",
+		"icon":"logo.png",		
+		"resizable":false,		
+		"toolbar": false,		
+		"width": 1000,		
+		"height": 700
+	},
+	"chromium-args": "--enable-threaded-compositing"
+}

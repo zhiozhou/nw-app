@@ -1,0 +1,13 @@
+{
+	"name": "dingtalk",
+	"main": "app.html",	
+	"author": "zhou",	
+	"window": {		
+		"title": "钉钉",
+		"icon":"logo.png",		
+		"resizable":false,		
+		"toolbar": false,		
+		"width": 1000,		
+		"height": 700	
+	}
+}
