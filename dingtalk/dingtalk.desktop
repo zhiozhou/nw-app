@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=Application
 Name=Dingtalk
-Icon=/opt/dingtalk/logo.png
-Exec=nw /opt/dingtalk
+Icon=/opt/nw-app/dingtalk/logo.png
+Exec=nw /opt/nw-app/dingtalk
 Terminal=false

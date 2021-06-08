@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=Application
 Name=Wechat
-Icon=/opt/wechat/logo.png
-Exec=nw /opt/wechat
+Icon=/opt/nw-app/wechat/logo.png
+Exec=nw /opt/nw-app/wechat
 Terminal=false
