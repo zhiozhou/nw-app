@@ -1,4 +1,4 @@
-<meta charset="utf-8">
+<meta charset="utf-8"> 
 <style>
 	html,
 	body {
@@ -20,20 +20,43 @@
 		width: 100%;
 		height: 100%;
 		transition: opacity .5s ease-in;
-		background: rgba(0, 0, 0, .15) url(./resource/index.gif)  no-repeat center center / 200px;
+		-webkit-transition: opacity .5s ease-in;
+		background: url(./loading.gif) center center no-repeat;
+		background-color: #000;
+	}
+
+	.counter-holder {
+		padding: 2rem;
+		color: white;
+		font-size: 1.2rem;
+		color: #ededed;
+	}
+
+	#counter {
+		font-size: 2.5rem;
 	}
 </style>
-<div id="loading"></div>
+<div id="loading">
+	<div class="counter-holder"><span id="counter">0</span> 周</div>
+</div>
 <script>
 	const url = 'https://web.wechat.com'
+	const circleTime = 1500
+
+	const counter = document.getElementById('counter'),
+		counterInterval = setInterval(() => {
+			counter.innerHTML = ++counter.innerHTML
+		}, circleTime)
 
 	const loading = document.getElementById('loading')
+
 	const iframe = document.createElement('iframe')
 	iframe.src = url
 	iframe.onload = () => {
 		loading.style.opacity = 0
 		setTimeout(() => {
 			loading.remove()
+			clearInterval(counterInterval)
 		}, 500)
 	}
 	// 防止微信内部跳页
