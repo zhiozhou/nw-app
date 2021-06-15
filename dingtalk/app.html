@@ -1,6 +1,6 @@
 <meta charset="utf-8"> 
 <style>
-	html,
+	/* html,
 	body {
 		margin: 0;
 		height: 100%;
@@ -35,29 +35,30 @@
 	#counter {
 		font-size: 2.5rem;
 		color: #fff;
-	}
+	} */
 </style>
-<div id="loading">
+<!-- <div id="loading">
 	<div class="counter-holder"><span id="counter">0</span> 周</div>
-</div>
+</div> -->
 <script>
-	const url = 'https://im.dingtalk.com'
+	window.location.href = 'https://im.dingtalk.com'
+	// const url = 'https://im.dingtalk.com'
 
-	const circleTime = 1500
-	const counter = document.getElementById('counter'),
-		counterInterval = setInterval(() => {
-			counter.innerHTML = ++counter.innerHTML
-		}, circleTime)
+	// const circleTime = 1500
+	// const counter = document.getElementById('counter'),
+	// 	counterInterval = setInterval(() => {
+	// 		counter.innerHTML = ++counter.innerHTML
+	// 	}, circleTime)
 
-	const loading = document.getElementById('loading')
-	const iframe = document.createElement('iframe')
-	iframe.src = url
-	iframe.onload = () => {
-		loading.style.opacity = 0
-		setTimeout(() => {
-			loading.remove()
-			clearInterval(counterInterval)
-		}, 500)
-	}
-	document.body.appendChild(iframe)
+	// const loading = document.getElementById('loading')
+	// const iframe = document.createElement('iframe')
+	// iframe.src = url
+	// iframe.onload = () => {
+	// 	loading.style.opacity = 0
+	// 	setTimeout(() => {
+	// 		loading.remove()
+	// 		clearInterval(counterInterval)
+	// 	}, 500)
+	// }
+	// document.body.appendChild(iframe)
 </script>
