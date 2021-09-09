@@ -1,6 +1,6 @@
 <meta charset="utf-8">
 <style>
-	html,
+	/* html,
 	body {
 		margin: 0;
 		height: 100%;
@@ -21,22 +21,24 @@
 		height: 100%;
 		transition: opacity .5s ease-in;
 		background: rgba(0, 0, 0, .15) url(./resource/index.gif)  no-repeat center center / 200px;
-	}
+	} */
 </style>
-<div id="loading"></div>
+<!-- <div id="loading"></div> -->
 <script>
-	const url = 'https://web.wechat.com'
 
-	const loading = document.getElementById('loading')
-	const iframe = document.createElement('iframe')
-	iframe.src = url
-	iframe.onload = () => {
-		loading.style.opacity = 0
-		setTimeout(() => {
-			loading.remove()
-		}, 500)
-	}
-	// 防止微信内部跳页
-	iframe.setAttribute('sandbox', 'allow-scripts allow-forms allow-same-origin')
-	document.body.appendChild(iframe)
+	window.location.href = 'https://web.wechat.com'
+	// const url = 'https://web.wechat.com'
+
+	// const loading = document.getElementById('loading')
+	// const iframe = document.createElement('iframe')
+	// iframe.src = url
+	// iframe.onload = () => {
+	// 	loading.style.opacity = 0
+	// 	setTimeout(() => {
+	// 		loading.remove()
+	// 	}, 500)
+	// }
+	// // 防止微信内部跳页
+	// iframe.setAttribute('sandbox', 'allow-scripts allow-forms allow-same-origin')
+	// document.body.appendChild(iframe)
 </script>
